@@ -58,10 +58,12 @@ public class Main {
     private static String readString(String s) {
         try (BufferedReader br = new BufferedReader(new FileReader(s))) {
             //чтение построчно
+            String res = "";
             String p;
             while ((p = br.readLine()) != null) {
-                return p;
+                    res += p;
             }
+            return res;
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
